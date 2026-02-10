@@ -1,0 +1,95 @@
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --muted: #666;
+  --line: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18vh 2rem 10vh;
+}
+
+.hero {
+  margin-bottom: 5rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.tagline {
+  margin-top: 1rem;
+  max-width: 34ch;
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+}
+
+section {
+  margin: 3.8rem 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem 1.25rem;
+}
+
+.project-placeholder p {
+  margin: 0.4rem 0;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-top: 14vh;
+    padding-inline: 1.2rem;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+}
