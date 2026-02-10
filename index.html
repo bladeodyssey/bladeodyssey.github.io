@@ -3,45 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AlexFred 的极简黑白个人主页" />
+    <meta name="description" content="AlexFred 的学术与作品集主页" />
     <title>AlexFred</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
-      <header class="hero">
-        <nav aria-label="主导航" class="site-nav">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
+      <header class="hero" id="home">
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#code">Code</a>
+          <a href="#contact">Contact</a>
         </nav>
+
         <h1>AlexFred</h1>
         <p class="tagline">Build simple products with clear thinking.</p>
+        <p class="subtitle">Research &amp; Engineering</p>
       </header>
 
-      <section aria-labelledby="skills-title">
-        <h2 id="skills-title">Skills</h2>
-        <ul class="skill-list">
-          <li>Frontend Development</li>
-          <li>JavaScript / TypeScript</li>
-          <li>UI / UX Thinking</li>
-          <li>Static Website Engineering</li>
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research interests</h2>
+        <ul class="research-list">
+          <li>
+            <span class="chip">Optimization</span>
+            <p>Scalable first-order and constrained optimization for high-dimensional systems.</p>
+          </li>
+          <li>
+            <span class="chip">Machine Learning</span>
+            <p>Robust learning under distribution shift with interpretable model behavior.</p>
+          </li>
+          <li>
+            <span class="chip">Computational Imaging</span>
+            <p>Joint design of sensing and reconstruction algorithms for inverse problems.</p>
+          </li>
+          <li>
+            <span class="chip">Sparse Representation</span>
+            <p>Dictionary and sparse coding methods for efficient data recovery.</p>
+          </li>
+          <li>
+            <span class="chip">Numerical Methods</span>
+            <p>Stable and fast solvers for PDEs and nonlinear scientific computing tasks.</p>
+          </li>
         </ul>
       </section>
 
-      <section aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <div class="project-placeholder">
-          <p>Project 01 — Coming Soon</p>
-          <p>Project 02 — Coming Soon</p>
-          <p>Project 03 — Coming Soon</p>
+      <section id="publications" aria-labelledby="publications-title">
+        <div class="section-head">
+          <h2 id="publications-title">Publications</h2>
+          <button id="toggle-publications" class="text-button" type="button" aria-expanded="false">
+            Show all
+          </button>
+        </div>
+
+        <div class="pub-group" data-year="2026">
+          <h3>2026</h3>
+          <ol>
+            <li class="publication-item selected">
+              <p>
+                AlexFred, A. Collaborator.
+                <strong>Physics-Informed Sparse Operators for Inverse Imaging.</strong>
+                <span class="venue">ICCV 2026.</span>
+                <span class="links">
+                  <a href="#" aria-label="PDF link">PDF</a>
+                  <a href="#" aria-label="arXiv link">arXiv</a>
+                  <a href="#" aria-label="DOI link">DOI</a>
+                </span>
+              </p>
+            </li>
+            <li class="publication-item selected">
+              <p>
+                AlexFred, B. Collaborator.
+                <strong>Adaptive Gradient Flows for Large-Scale Optimization.</strong>
+                <span class="venue">NeurIPS 2026.</span>
+                <span class="links">
+                  <a href="#" aria-label="PDF link">PDF</a>
+                  <a href="#" aria-label="arXiv link">arXiv</a>
+                  <a href="#" aria-label="DOI link">DOI</a>
+                </span>
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="pub-group" data-year="2025">
+          <h3>2025</h3>
+          <ol>
+            <li class="publication-item selected">
+              <p>
+                AlexFred, C. Collaborator.
+                <strong>Compressed Priors for Efficient Reconstruction Pipelines.</strong>
+                <span class="venue">CVPR 2025.</span>
+                <span class="links">
+                  <a href="#" aria-label="PDF link">PDF</a>
+                  <a href="#" aria-label="arXiv link">arXiv</a>
+                  <a href="#" aria-label="DOI link">DOI</a>
+                </span>
+              </p>
+            </li>
+            <li class="publication-item">
+              <p>
+                AlexFred, D. Collaborator.
+                <strong>Convex Relaxations for Imaging with Unknown Kernels.</strong>
+                <span class="venue">SIAM Journal on Imaging Sciences, 2025.</span>
+                <span class="links">
+                  <a href="#" aria-label="PDF link">PDF</a>
+                  <a href="#" aria-label="arXiv link">arXiv</a>
+                  <a href="#" aria-label="DOI link">DOI</a>
+                </span>
+              </p>
+            </li>
+            <li class="publication-item">
+              <p>
+                AlexFred, E. Collaborator.
+                <strong>Numerical Schemes for Sparse-Regularized Dynamic Systems.</strong>
+                <span class="venue">ICLR 2025 Workshop.</span>
+                <span class="links">
+                  <a href="#" aria-label="PDF link">PDF</a>
+                  <a href="#" aria-label="arXiv link">arXiv</a>
+                  <a href="#" aria-label="DOI link">DOI</a>
+                </span>
+              </p>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section aria-labelledby="contact-title">
+      <section id="code" aria-labelledby="code-title">
+        <h2 id="code-title">Code</h2>
+        <div class="code-grid">
+          <article class="code-card">
+            <h3>InverseLab</h3>
+            <p>Reference toolbox for optimization-driven inverse imaging experiments.</p>
+            <a href="#">GitHub</a>
+          </article>
+          <article class="code-card">
+            <h3>SparseOps</h3>
+            <p>Minimal sparse operator and proximal method implementations in JavaScript.</p>
+            <a href="#">GitHub</a>
+          </article>
+          <article class="code-card">
+            <h3>Numerics Notes</h3>
+            <p>Practical numerical methods demos with reproducible benchmark scripts.</p>
+            <a href="#">GitHub</a>
+          </article>
+          <article class="code-card">
+            <h3>GitHub Profile</h3>
+            <p>More repositories and ongoing experiments.</p>
+            <a href="https://github.com/bladeodyssey" target="_blank" rel="noopener noreferrer">@bladeodyssey</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <p>
-          <a href="mailto:alexfred@example.com">alexfred@example.com</a>
+          <a href="mailto:alexfred@example.com" id="email-link">alexfred@example.com</a>
         </p>
+        <button id="copy-email" class="text-button" type="button">Copy email</button>
       </section>
     </main>
 
