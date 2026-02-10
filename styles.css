@@ -29,6 +29,19 @@ body {
   margin-bottom: 5rem;
 }
 
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--fg);
+  text-decoration-thickness: 2px;
+}
+
 h1,
 h2 {
   margin: 0;
